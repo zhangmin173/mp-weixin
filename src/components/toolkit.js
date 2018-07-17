@@ -2,7 +2,7 @@
  * @Author: 张敏 
  * @Date: 2018-04-17 08:41:11 
  * @Last Modified by: Zhang Min
- * @Last Modified time: 2018-07-08 11:06:41
+ * @Last Modified time: 2018-07-16 21:39:48
  */
 
 /**
@@ -30,18 +30,6 @@ const Toolkit = (function () {
             options.complete && options.complete();
           }
         };
-        if (window.location.href.indexOf('admin.nextdog.cc') > -1) {
-          _default.url = 'http://admin.nextdog.cc/Projects/WuYe/index.php/home' + _default.url
-        }
-        if (window._global && window._global.userinfo) {
-          _default.data.user_id = window._global.userinfo.user_id;
-        }
-        if (window._global && window._global.admininfo) {
-          _default.data.admin_id = window._global.admininfo.admin_id;
-        }
-        if (window._global && window._global.workerinfo) {
-          _default.data.worker_id = window._global.workerinfo.worker_id;
-        }
         $.ajax(_default);
       },
       /**

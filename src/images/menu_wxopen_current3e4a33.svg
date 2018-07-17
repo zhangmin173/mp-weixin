@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon /  Nav / Miniprogram HL</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icon-图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-143.000000, -348.000000)" fill="#1AAD19">
+            <path d="M155,352 C154,353 153,354 153,356 L153,363 C153,364 153,366 151,366 C150.129343,366 147,366 147,363 C147,362 147,361 149,360 C150.309163,359.345418 151,360 151,359 C151,358 150,358 149,358 C148,358 147,359 146,360 C145,361 145,362.264074 145,363 C145,365.811093 147.4149,368 151,368 C154.5851,368 155,364 155,362 L155,356 C155,355 156,353 158,353 C160,353 162,354 162,356 C162,358 160.763983,358.679111 160,359 C159.109083,359.259944 158,359 158,360 C158,360.550185 158.605406,360.797666 159.316591,360.908987 C159.898035,361 160.550185,361 161,361 C163,360 164,359 164,356 C164,353 161.5851,351 158,351 C157.56945,351 156,351 155,352 Z" id="Icon-/--Nav-/-Miniprogram-HL"></path>
+        </g>
+    </g>
+</svg>

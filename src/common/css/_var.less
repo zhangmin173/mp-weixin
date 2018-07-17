@@ -1,6 +1,44 @@
-@rem: 200rem;
-@device-width: 750px;
-@base-font-size: 12px;
-
 @default: #eee;
 @primary: #1AAD19;
+@35: #353535;
+@9a: #9a9a9a;
+
+.wd(@width, @height) {
+    width: @width * 1px;
+    height: @height * 1px;
+}
+
+.bg(@bg) {
+    background-image: url('@{bg}');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.bgs() {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pl(@top, @left) {
+    position: absolute;
+    left: @left * 1px;
+    top: @top * 1px;
+}
+
+.pr(@top, @right) {
+    position: absolute;
+    right: @right * 1px;
+    top: @top * 1px;
+}
+
+.plb(@bottom, @left) {
+    position: absolute;
+    left: @left * 1px;
+    bottom: @bottom * 1px;
+}
+
+.prb(@bottom, @right) {
+    position: absolute;
+    right: @right * 1px;
+    bottom: @bottom * 1px;
+}

@@ -1,0 +1,136 @@
+@import '../../common/css/_var.less';
+
+.app-header {
+    padding: 0 65px;
+    position: relative;
+    background-color: #fff;
+    height: 80px;
+
+    .app-header-logo {
+        display: block;
+        .pl(20, 65);
+        .wd(240,40);
+        background-position: 0 0;
+        .bg('https://res.wx.qq.com/mpres/en_US/htmledition/modules/weui-desktopSkin/svg/buildless/bg_logo_primary3e4a33.svg');
+    }
+
+    .app-header-info {
+        .pr(10, 65);
+        height: 40px;
+    }
+
+    .mp-opr {
+        .pr(10, 175);
+        display: inline-block;
+        .wd(40, 40);
+        border-radius: 50%;
+        border: 1px solid #E4E8EB;
+
+        &::after {
+            .pl(10, 9);
+            content: " ";
+            .wd(22, 20);
+            .bg('../../images/opr.svg');
+        }
+    }
+
+    .mp-info {
+        .pr(10, 0);
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover {
+            .mp-link {
+                display: block;
+            }
+        }
+        
+        &::after {
+            .pr(20, 0);
+            content: " ";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-width: 4px;
+            border-style: dashed;
+            border-color: transparent;
+            border-bottom-width: 0;
+            border-top-color: #9A9A9A;
+            border-top-style: solid;
+            vertical-align: middle;
+            margin-top: -0.2em;
+        }
+
+        .mp-logo {
+            .pr(0, 130);
+            .bgs();
+            display: inline-block;
+            .wd(40, 40);
+            border-radius: 50%;
+            background-color: #eee;
+        }
+
+        .mp-name {
+            .pr(0, 10);
+            width: 110px;
+            font-weight: 400;
+            color: @35;
+        }
+
+        .mp-auth {
+            .pr(20, 10);
+            width: 110px;
+            font-weight: 400;
+            font-size: 12px;
+            color: @9a;
+            vertical-align: top;
+        }
+    }
+
+    .mp-link {
+        .pr(40 ,0);
+        display: none;
+        width: 130px;
+        background-color: #fff;
+        box-shadow: 0 1px 20px 0 #E4E8EB;
+        border-radius: 2px;
+
+        .mp-link-item {
+            position: relative;
+            display: block;
+            height: 42px;
+            line-height: 42px;
+            color: #353535;
+            padding: 0 24px;
+            text-align: right;
+
+            &:hover {
+                background-color: #f2f2f2;
+            }
+
+            &::after {
+                .pl(15, 24);
+                display: block;
+                content: '';
+                .wd(12, 12);
+            }
+
+            &:nth-child(1)::after {
+                .bg('https://mp.weixin.qq.com/mpres/htmledition/weui-desktopSkin/svg/default/account-user3e4a19.svg');
+                background-size: auto 100%;
+            }
+
+            &:nth-child(2)::after {
+                .bg('https://mp.weixin.qq.com/mpres/htmledition/weui-desktopSkin/svg/default/account-wxverify3e4a19.svg');
+            }
+
+            &:nth-child(3)::after {
+                .bg('https://mp.weixin.qq.com/mpres/htmledition/weui-desktopSkin/svg/default/account-setting3e4a19.svg');
+            }
+
+            &:nth-child(4)::after {
+                .bg('https://mp.weixin.qq.com/mpres/htmledition/weui-desktopSkin/svg/default/account-logout3e4a19.svg');
+            }
+        }
+    }
+}

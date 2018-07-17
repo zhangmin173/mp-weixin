@@ -1,0 +1,48 @@
+@import '../../common/css/_var.less';
+
+.app-menu {
+    width: 250px;
+
+    .app-menu-group {
+        position: relative;
+        padding-bottom: 10px;
+    
+        .app-menu-title {
+            position: relative;
+            display: block;
+            padding-left: 98px;
+            font-size: 18px;
+            color: #222;
+            line-height: 50px;
+    
+            span {
+                .pl(10, 68);
+                display: block;
+                .wd(20, 20);
+                .bgs();
+            }
+        }
+    
+        .app-menu-name {
+            position: relative;
+            padding-left: 98px;
+            display: block;
+            color: #222;
+            line-height: 36px;
+        }
+    
+        .app-menu-line {
+            .plb(0, 98);
+            width: 43%;
+            height: 2px;
+            border-top: 1px solid #e4e8eb;
+        }
+    }
+
+    .app-icon-new {
+        .prb(8 ,60);
+        display: inline-block;
+        .wd(18, 12);
+        background: url('https://res.wx.qq.com/mpres/zh_CN/htmledition/comm_htmledition/style/base/base_z3ebe56.png') 0 -2938px no-repeat;
+    }
+}

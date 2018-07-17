@@ -5,19 +5,14 @@
   <% if (htmlWebpackPlugin.files.favicon) { %>
     <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.favicon%>">
   <% } %>
-  <title>微信公众平台</title>
+  <title>游戏列表</title>
   <% for (var css in htmlWebpackPlugin.files.css) { %>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css[css] %>">
   <% } %>
   <script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[0] %>"></script>
 </head>
 <body>
-    <div id="app-header"></div>
-    <div class="container">
-      <div id="app-menu"></div>
-      <div id="app-main"></div>
-    </div>
-    <div id="app-footer"></div>
+    <button id="login">登陆</button>
     <script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[1] %>"></script>
 </body>
 </html>

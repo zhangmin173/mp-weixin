@@ -54,7 +54,7 @@ exports.getEntry = getEntry;
  * @param {匹配规则} globPath 
  * @param {文件根目录} pathDir 
  */
-function getPage(pathDir, ico = 'png') {
+function getPage(pathDir, ico = 'ico') {
   let pages = [], conf = {}, pathname, chunk, extname;
   const files = glob.sync(pathDir + '**/index.html');
   files.forEach(file => {
