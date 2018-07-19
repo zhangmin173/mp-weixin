@@ -2,7 +2,7 @@
  * @Author: Zhang Min 
  * @Date: 2018-07-16 21:43:51 
  * @Last Modified by: Zhang Min
- * @Last Modified time: 2018-07-17 09:27:18
+ * @Last Modified time: 2018-07-17 21:04:41
  */
 
 import './index.less';
@@ -19,7 +19,7 @@ export default class MenuComponent {
             menus: [
                 {
                     name: '首页',
-                    icon: 'https://mp.weixin.qq.com/mpres/htmledition/weui-desktopSkin/svg/default/menu_home3e4a19.svg'
+                    icon: 'https://mp.weixin.qq.com/zh_CN/htmledition/modules/weui-desktopSkin/svg/default/menu_home_current3e4a33.svg'
                 },
                 {
                     name: '功能',
@@ -212,9 +212,15 @@ export default class MenuComponent {
         let htmlStr = '<div class="app-menu">';
         for (let index = 0; index < menus.length; index++) {
             const paraent = menus[index];
-            htmlStr += `<div class="app-menu-group">
+            if (index === 0) {
+                htmlStr += `<div class="app-menu-group">
+                <a class="app-menu-title active" href="${paraent.href}"><span style="background-image:url('${paraent.icon}')"></span>${paraent.name}</a>
+            `;
+            } else {
+                htmlStr += `<div class="app-menu-group">
                 <a class="app-menu-title" href="${paraent.href}"><span style="background-image:url('${paraent.icon}')"></span>${paraent.name}</a>
             `;
+            }
             if (paraent.child && paraent.child.length) {
                 for (let index = 0; index < paraent.child.length; index++) {
                     const child = paraent.child[index];

@@ -29,5 +29,125 @@ a {
 }
 
 .container {
+    display: flex;
     padding: 40px 0 80px;
+}
+
+#app-main {
+    flex: 1;
+    padding: 0 60px;
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 26px;
+        font-weight: 400;
+    }
+
+    .app-tab {
+        margin-bottom: 40px;
+        box-sizing: border-box;
+        height: 40px;
+        border-bottom: 1px solid #e0e1e2;
+        font-size: 16px;
+
+        .app-tab-link {
+            margin-right: 24px;
+            height: 100%;
+            width: 64px;
+            float: left;
+
+            a {
+                height: 100%;
+                display: inline-block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                word-wrap: normal;
+                max-width: 120px;
+                color: @35;
+            }
+
+            &.active {
+                border-bottom: 2px solid @primary;
+
+                a {
+                    color: @light;
+                }
+            }
+        }
+
+    }
+
+    .app-body {
+        padding: 60px;
+        background-color: #fff;
+    }
+
+    .app-tip {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: @35;
+
+        span {
+            margin-right: 10px;
+            vertical-align: middle;
+            display: inline-block;
+            .wd(16, 16);
+            background: url('https://res.wx.qq.com/mpres/zh_CN/htmledition/comm_htmledition/style/base/base_z3ebe56.png') 0 -876px no-repeat;
+        }
+
+        p {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+}
+
+.app-block {
+    border: 1px solid #e7e7eb;
+    margin-bottom: 20px;
+
+    .app-title {
+        height: 38px;
+        line-height: 38px;
+        padding: 0 20px;
+        background-color: #f4f5f9;
+        border-bottom: 1px solid #e7e7eb;
+    }
+
+    .app-con {
+        margin: 20px 0;
+    }
+}
+
+.app-tabs {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+    font-size: 14px;
+
+    .app-tabs-item {
+        box-sizing: border-box;
+        float: left;
+        padding: 0 20px;
+        color: #222;
+        height: 32px;
+        line-height: 32px;
+        border-top: 1px solid #c9cace;
+        border-bottom: 1px solid #c9cace;
+        border-left: 1px solid #c9cace;
+        background-color: #fff;
+        text-align: center;
+
+        &:last-child {
+            border-right: 1px solid #c9cace;
+        }
+
+        &.active {
+            border-color: 1px solid @primary;
+            background-color: @primary;
+            color: #fff;
+        }
+    }
 }

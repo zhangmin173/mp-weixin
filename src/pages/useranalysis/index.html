@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%= require('html-loader!../../common/layout/head.html') %>
+    <% if (htmlWebpackPlugin.files.favicon) { %>
+      <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.favicon%>">
+      <% } %>
+        <title>微信公众平台</title>
+        <% for (var css in htmlWebpackPlugin.files.css) { %>
+          <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css[css] %>">
+          <% } %>
+            <script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[0] %>"></script>
+</head>
+
+<body>
+  <div id="app-header"></div>
+  <div class="container">
+    <div id="app-menu"></div>
+    <div id="app-main">
+      <h2>用户分析</h2>
+      <div class="app-tab">
+        <div class="app-tab-link active">
+          <a href="">用户增长</a>
+        </div>
+        <div class="app-tab-link">
+          <a href="">用户属性</a>
+        </div>
+      </div>
+      <div class="app-body">
+        <div class="app-tip">
+          <span></span>
+          <p>本页根据昨日数据来计算，而用户管理页根据当前数据计算，两者不一致。</p>
+        </div>
+        <div class="app-block">
+          <div class="app-title">昨日关键指标</div>
+          <div class="app-con">
+            <div class="box1">
+              <div class="box1-title">新关注人数</div>
+              <div class="box1-num">0</div>
+              <div class="box1-data">
+                日
+                <span></span>100%
+              </div>
+              <div class="box1-data">
+                周
+                <span></span>100%
+              </div>
+              <div class="box1-data">
+                月
+                <span></span>100%
+              </div>
+            </div>
+            <div class="box1">
+              <div class="box1-title">取消关注人数</div>
+              <div class="box1-num">0</div>
+              <div class="box1-data">
+                日
+                <span></span>100%
+              </div>
+              <div class="box1-data">
+                周
+                <span></span>100%
+              </div>
+              <div class="box1-data">
+                月
+                <span></span>100%
+              </div>
+            </div>
+            <div class="box1">
+              <div class="box1-title">净增关注人数</div>
+              <div class="box1-num">0</div>
+              <div class="box1-data">
+                日
+                <span></span>100%
+              </div>
+              <div class="box1-data">
+                周
+                <span></span>100%
+              </div>
+              <div class="box1-data">
+                月
+                <span></span>100%
+              </div>
+            </div>
+            <div class="box1">
+              <div class="box1-title">累积关注人数</div>
+              <div class="box1-num">0</div>
+              <div class="box1-data">
+                日
+                <span></span>100%
+              </div>
+              <div class="box1-data">
+                周
+                <span></span>100%
+              </div>
+              <div class="box1-data">
+                月
+                <span></span>100%
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="app-tabs">
+          <li class="app-tabs-item active">新增人数</li>
+          <li class="app-tabs-item">取消关注人数</li>
+          <li class="app-tabs-item">净增人数</li>
+          <li class="app-tabs-item">累积人数</li>
+        </ul>
+        <div class="app-block">
+          <div class="app-title">
+            <span class="zuijin">最近30天 <i></i></span>
+            <span class="date">2018-06-18 至 2018-07-17 <i></i></span>
+            <span class="source">全部来源 <i></i></span>
+            <div class="tab">按时间对比</div>
+          </div>
+          <div class="app-con">
+            <div class="box2-title"></div>
+            <div class="box2">
+              折线图
+            </div>
+          </div>
+        </div>
+        <div class="app-block">
+          <div class="app-title">
+            <span class="date">2018-06-18 至 2018-07-17 <i></i></span>
+            <div class="tab">下载表格</div>
+            <div class="wenhao"></div>
+          </div>
+          <div class="app-con box3">
+            <table class="tb">
+              <thead>
+                <tr>
+                  <th>时间 <i></i></th>
+                  <th>新关注人数 <i></i></th>
+                  <th>取消人数 <i></i></th>
+                  <th>净增关注人数 <i></i></th>
+                  <th>累积关注人数 <i></i></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2018-07-07</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="page">
+              <span class="index">1</span>/<span class="total">3</span><span class="change"></span><input type="text"><span class="jump"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="app-footer"></div>
+  <script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[1] %>"></script>
+</body>
+
+</html>
